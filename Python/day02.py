@@ -5,13 +5,45 @@
 # else:
 #     print("You are under 18 ")
 
-score = int(input("Enter your score: "))
+# name = input("Enter your name: ")
+# score = int(input("Enter your score: "))
 
-if score <=100 and score >=90:
-    print("A")
-elif score <= 89 and score >= 80:
-    print("B")
-elif score <=79 and score >= 70:
-    print("C")
-elif score < 70:
-    print("Fail")
+
+# if score >= 70:
+#     print("\n---- Info ----")
+#     print("Grade: A")
+#     print("Result: Passed")
+
+# else:
+#     print("\n---- Info ----")
+#     print("Grade: B")
+#     print("Result: Failed")
+
+# if score <=100 and score >=90:
+#     print("A")
+# elif score <= 89 and score >= 80:
+#     print("B")
+# elif score <=79 and score >= 70:
+#     print("C")
+# elif score < 70:
+#     print("Fail")
+
+first_number = int(input("Enter first: "))
+second_number = int(input("Enter second: "))
+operation = input("What do you want to do?(+,-,*,/)")
+result = ""
+
+if operation == "+":
+    result = first_number +second_number
+    print(result)
+elif operation == "-":
+    result = first_number - second_number
+    print(result)
+elif operation == "*":
+    result = first_number * second_number
+    print(result)
+elif operation == "/":
+    result = first_number / second_number
+    print(result)
+else:
+    print("Invalid operation")
