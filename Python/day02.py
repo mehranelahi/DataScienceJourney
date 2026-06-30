@@ -28,22 +28,36 @@
 # elif score < 70:
 #     print("Fail")
 
-first_number = int(input("Enter first: "))
-second_number = int(input("Enter second: "))
-operation = input("What do you want to do?(+,-,*,/)")
-result = ""
 
-if operation == "+":
-    result = first_number +second_number
-    print(result)
-elif operation == "-":
-    result = first_number - second_number
-    print(result)
-elif operation == "*":
-    result = first_number * second_number
-    print(result)
-elif operation == "/":
-    result = first_number / second_number
-    print(result)
-else:
-    print("Invalid operation")
+
+again = "y"
+while again == "y":
+    first_number = int(input("Enter first: "))
+    second_number = int(input("Enter second: "))
+    operation = input("What do you want to do?(+,-,*,/)")
+    result = ""
+
+
+    if operation == "+":
+        result = first_number +second_number
+        
+    elif operation == "-":
+        result = first_number - second_number
+        
+    elif operation == "*":
+        result = first_number * second_number
+        
+    elif operation == "/":
+        if second_number != 0:
+            result = first_number / second_number
+        else:
+            print("Cannot divide by zero")
+        
+    else:
+        print("Invalid operation")
+    
+    if result !="":
+        print(f"Result: {result}")
+
+    again =input("/Do another calculation? (y/n): ").lower()
+    
