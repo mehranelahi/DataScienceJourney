@@ -18,4 +18,6 @@ for i in range(len(student_names)):
     print(f"{student_names[i]}: {scores[i]}")
 
 
+highest_index = scores.index(max(scores))
+print(f"The top student is: {student_names[highest_index]}")
 
