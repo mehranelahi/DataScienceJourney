@@ -22,6 +22,8 @@ print(f'Total students: {len(student_names)} ')
 print(f'Average score: {calculate_average(scores):.2f}')
 print(f"Highest score: {max(scores)}")
 print(f"Lowest score: {min(scores)}")
-
+print("---- Student List ----")
+for i in range(len(student_names)):
+    print(f"{student_names[i]}: {scores[i]}")
 
 
