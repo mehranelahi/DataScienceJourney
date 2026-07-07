@@ -1,9 +1,11 @@
 file = open("students.csv", "r")
 
 for line in file:
-    # print(line.strip())
     parts = line.strip().split(",")
-    print(parts)
+    name = parts[0]
+    score = parts[1]
+    print(f"Student: {name}\n Score: {score}")
+    
 
 
 
