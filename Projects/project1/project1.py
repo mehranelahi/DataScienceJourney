@@ -35,14 +35,9 @@ def show_report():
             highest_score = score
     top_student = students[scores.index(highest_score)]
     print(f"Top Student: {top_student}")
-
+    
     lowest_score = min(scores)
-    for score in scores:
-        if score < lowest_score:
-            lowest_score = score
-        else:
-            lowest_score = lowest_score
-    weakest_student = students[scores.index[lowest_score]]
+    weakest_student = students[scores.index(lowest_score)]
     print(f"Weakest Student: {weakest_student}")
 
 
