@@ -1,6 +1,6 @@
 
 print("\n==== Student Management System ====")
-options = ["Show Report","Search Student","Show Excellebt Students","Show Passed Students","Show Failed Students","Exit"]
+options = ["Show Report","Search Student","Show Excellebt Students","Show Passed Students / Failed Students","Exit"]
 
 i = 1
 for op in options:
@@ -66,7 +66,33 @@ def search_student():
     file.close()  
 
 
+def show_excellent():
+    file = open("students.csv",'r')
+    next(file)
 
+    for line in file:
+        parts = line.strip().split(',')
+        name = parts[0]
+        score = int(parts[1])
+        if score >= 18:
+            print(f'{name} --> {score}') 
+   
+    file.close()
+
+def show_passed():
+    print("\n----- Passed Students -----")
+    file = open("students.csv","r")
+    next(file)
+
+    for line in file:
+        parts = line.strip().split(',')
+        name = parts[0]
+        score = int(parts[1]) 
+        if score >=10:
+            print(f"{name}")
+        else:
+            print("----- Failed Students -----")
+            print(f"{name}")
 
 
 ask = int(input("What do you want? "))
@@ -75,3 +101,7 @@ if ask == 1:
     show_report()
 elif ask == 2:
     search_student()
+elif ask == 3:
+    show_excellent()
+elif ask == 4:
+    show_passed()
