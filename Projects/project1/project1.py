@@ -1,15 +1,5 @@
-
-print("\n==== Student Management System ====")
-options = ["Show Report","Search Student","Show Excellebt Students","Show Passed Students / Failed Students","Exit"]
-
-i = 1
-for op in options:
-    print(f"{i}. {op}")
-    i += 1
-
-
 def show_report():
-    print("\n----- Report -----")
+    print("\n----- Student Management System -----")
     file = open("students.csv","r")
     next(file)
     students = []
@@ -27,10 +17,8 @@ def show_report():
     print(f"Highest Score: {max(scores)}")
     print(f"Lowest Score: {min(scores)}")
 
+    
     highest_score = max(scores)
-    for score in scores:
-        if score > highest_score:
-            highest_score = score
     top_student = students[scores.index(highest_score)]
     print(f"Top Student: {top_student}")
     
@@ -93,15 +81,30 @@ def show_passed():
         else:
             print("----- Failed Students -----")
             print(f"{name}")
+    file.close()
 
 
-ask = int(input("What do you want? "))
+while True:
+ print("\n==== Student Management System ====")
+ options = ["Show Report","Search Student","Show Excellent Students","Show Passed Students / Failed Students","Exit"]
 
-if ask == 1:
-    show_report()
-elif ask == 2:
-    search_student()
-elif ask == 3:
-    show_excellent()
-elif ask == 4:
-    show_passed()
+ i = 1
+ for op in options:
+     print(f"{i}. {op}")
+     i += 1
+
+ ask = int(input("What do you want? "))
+
+ if ask == 1:
+     show_report()
+ elif ask == 2:
+     search_student()
+ elif ask == 3:
+     show_excellent()
+ elif ask == 4:
+     show_passed()
+ elif ask == 5:
+     print("Goodbye👋")
+     break
+ else:
+     print("Invalid choice. Please try again.")
