@@ -1,23 +1,38 @@
 import pandas as pd
-
 df = pd.read_csv("students.csv")
 
-print("\n----- Student Report -----\n")
+# print("\n----- Student Report -----\n")
 
-total_students = len(df["name"])
-print("Total Students:",total_students)
+# total_students = len(df["name"])
+# print("Total Students:",total_students)
 
-average_score = df["score"].mean()
-print("AverageScore:", average_score)
+# average_score = df["score"].mean()
+# print("AverageScore:", average_score)
 
-highest_score = df["score"].max()
-print("Highest Score:",highest_score)
+# highest_score = df["score"].max()
+# print("Highest Score:",highest_score)
 
-lowest_score = df["score"].min()
-print("Lowest Score:", lowest_score)
+# lowest_score = df["score"].min()
+# print("Lowest Score:", lowest_score)
 
-top_student = df[df["score"] == df["score"].max()]["name"].iloc[0]
-print("\nTop Student:",top_student)
+# top_student = df[df["score"] == df["score"].max()]["name"].iloc[0]
+# print("\nTop Student:",top_student)
 
-weakest_student = df[df["score"] == df["score"].min()]["name"].iloc[0]
-print("Weakest Student:",weakest_student)
+# weakest_student = df[df["score"] == df["score"].min()]["name"].iloc[0]
+# print("Weakest Student:",weakest_student)
+
+######################
+
+# print(df.iloc[0])
+# print(df.loc[0])
+
+# print(df.iloc[2]["name"])
+# print(df.iloc[3]["score"])
+
+
+# print(df.loc[2])
+# print(df.loc[2, "name"])
+
+print(df.iloc[1:3])
+
+print(df.loc[1:2])
