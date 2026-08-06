@@ -2,10 +2,16 @@ import pandas as pd
 
 df = pd.read_csv('students.csv')
 
-print(df[['name', 'score']])
+# df["status"] = ""
+df.loc[df["score"] >= 18, "status"] = "pass"
+df.loc[df["score"] < 18,"status"] = "fail"
 
-print(df[["name","status"]])
+# print(df)
 
-print(df[["score","status"]])
+# print(df[['name', 'score']])
 
-print(df[["status","name","score"]])
+# print(df[["name","status"]])
+
+# print(df[["score","status"]])
+
+print(df[["status","name","score"]]) 
