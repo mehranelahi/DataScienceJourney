@@ -8,13 +8,13 @@ data = {
 
 df = pd.DataFrame(data)
 
-# print(df)
+print(df)
 
-# print(df.groupby("category")["sales"].sum())
+print(df.groupby("category")["sales"].sum())
 
-# print(df.groupby("category")["sales"].mean())
+print(df.groupby("category")["sales"].mean())
 
-# 1
+1
 print(df.groupby("category")["sales"].sum())
 
 # 2
@@ -23,4 +23,7 @@ print(df.groupby("category")["sales"].max())
 # 3
 print(df.groupby("category")["product"].count())
 
+# /////// agg //////
+
+print(df.groupby("category")["sales"].agg(["sum", "mean", "max", "count"]))
 
